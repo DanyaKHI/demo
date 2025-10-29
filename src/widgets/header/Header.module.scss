@@ -1,0 +1,78 @@
+.header {
+  --bg: rgba(255, 255, 255, 0.75);
+  --text: #1d1e22;
+  --muted: #6b7280;
+  --hover: rgba(0, 0, 0, 0.04);
+
+  background: var(--bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+:global(:root[data-mantine-color-scheme='dark']) .header {
+  --bg: rgba(24, 24, 27, 0.6);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --hover: rgba(255, 255, 255, 0.06);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10px;
+}
+
+.navDesktop {
+  display: block;
+}
+
+.mainLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.mainLink::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 6px;
+  height: 2px;
+  background: transparent;
+  border-radius: 2px;
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform 100ms ease;
+}
+
+.mainLink:hover::after {
+  background: var(--muted);
+  transform: scaleX(1);
+}
+
+.active::after {
+  background: var(--muted);
+  transform: scaleX(1);
+}
+
+.actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.actionIcon {
+  border-radius: 10px;
+}
+
+.actionIcon:hover {
+  background: var(--hover);
+}

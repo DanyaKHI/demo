@@ -1,0 +1,94 @@
+.headerWrap { position: relative; }
+.headerRow { padding: 8px 4px; }
+.headerAccent {
+  height: 3px;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--mantine-color-violet-5), var(--mantine-color-grape-6));
+}
+
+.kpiRow { margin-top: 8px; }
+.kpi { display: grid; gap: 2px; }
+.kpiLabel { color: var(--mantine-color-dimmed); font-size: 12px; }
+.kpiValue { font-weight: 800; }
+.pos { color: var(--mantine-color-teal-6); }
+.neg { color: var(--mantine-color-red-6); }
+
+.glassToolbar {
+  background: color-mix(in oklab, var(--mantine-color-default) 86%, transparent);
+  backdrop-filter: blur(4px);
+}
+.toolbarRow { gap: 10px; }
+.search { flex: 1 1 40%; min-width: 260px; }
+.dateRange { min-width: 260px; }
+
+.tableWrap { overflow: hidden; }
+.table {
+  --row-radius: 14px;
+}
+.table thead tr { background: color-mix(in oklab, var(--mantine-color-default) 92%, transparent); }
+.th { white-space: nowrap; user-select: none; }
+.thSortIcon { opacity: .35; }
+.thSortIconActive { opacity: .9; }
+
+.tdDate { white-space: nowrap; }
+
+.table tbody tr {
+  transition: background-color .15s ease;
+  border-top: 1px solid var(--mantine-color-default-border);
+}
+.table tbody tr:hover {
+  background: color-mix(in oklab, var(--mantine-color-default) 94%, transparent);
+}
+.table tbody tr:nth-child(odd) {
+  background: color-mix(in oklab, var(--mantine-color-default) 98%, transparent);
+}
+
+.tickerPill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--mantine-color-blue-6) 20%, transparent);
+  color: var(--mantine-color-blue-6);
+  font-weight: 700; letter-spacing: .5px;
+}
+.badgeSoft {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 2px 8px; border-radius: 999px; margin-top: 6px;
+  background: color-mix(in oklab, var(--mantine-primary-color-filled) 12%, transparent);
+  color: var(--mantine-primary-color-6);
+  font-size: 12px; font-weight: 600;
+}
+.tone_teal   { background: color-mix(in oklab, var(--mantine-color-teal-6) 12%, transparent); color: var(--mantine-color-teal-7); }
+.tone_violet { background: color-mix(in oklab, var(--mantine-color-violet-6) 12%, transparent); color: var(--mantine-color-violet-7); }
+.tone_blue   { background: color-mix(in oklab, var(--mantine-color-blue-6) 12%, transparent); color: var(--mantine-color-blue-7); }
+
+.chip {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 22px; border-radius: 7px;
+  font-weight: 800; font-size: 12px;
+  background: var(--mantine-color-default);
+  box-shadow: 0 0 0 1px var(--mantine-color-default-border) inset;
+}
+.chip_RUR { color: var(--mantine-color-grape-6); }
+.chip_USD { color: var(--mantine-color-teal-6); }
+.chip_EUR { color: var(--mantine-color-blue-6); }
+
+.num { white-space: nowrap; }
+
+.rowAction { opacity: .6; }
+.rowAction:hover { opacity: 1; }
+.actionsCell { width: 56px; }
+
+.link { color: var(--mantine-color-blue-6); text-decoration: none; }
+
+.softBtn {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--mantine-color-pink-6) 18%, transparent), transparent);
+  color: var(--mantine-color-pink-6);
+  border-color: color-mix(in oklab, var(--mantine-color-pink-6) 30%, transparent);
+}
+
+:root[data-mantine-color-scheme='light'] {
+  --mantine-color-default: var(--mantine-color-body);
+  --mantine-color-default-border: var(--mantine-color-gray-3);
+}

@@ -1,0 +1,34 @@
+.page {
+  padding-bottom: var(--mantine-spacing-lg);
+}
+
+.kpi {
+  background: var(--mantine-color-default);
+  border-color: var(--mantine-color-default-border);
+  box-shadow: 0 0 0 1px var(--mantine-color-default-border) inset;
+}
+
+.chart {
+  width: 100%;
+  height: 280px;
+}
+
+.tile {
+  background: var(--mantine-color-default);
+  border-color: var(--mantine-color-default-border);
+  box-shadow: 0 0 0 1px var(--mantine-color-default-border) inset;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* тема-френдли токены */
+:root[data-mantine-color-scheme='light'] {
+  --mantine-color-default: var(--mantine-color-body);
+  --mantine-color-default-border: var(--mantine-color-gray-3);
+}
+:root[data-mantine-color-scheme='dark'] {
+  --mantine-color-default: var(--mantine-color-dark-6);
+  --mantine-color-default-border: var(--mantine-color-dark-4);
+}
