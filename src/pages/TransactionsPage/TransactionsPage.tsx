@@ -278,7 +278,7 @@ export default function TransactionsPage() {
                   <Table.Td ta="right" className={classes.num}>{kFmt(r.price)}</Table.Td>
 
                   <Table.Td ta="right">
-                    <Text fw={800} className={`${classes.num} ${r.amount < 0 ? classes.neg : classes.pos}`}>{kFmt(r.amount)}</Text>
+                    <Text className={`${classes.num} ${r.amount < 0 ? classes.neg : classes.pos}`}>{kFmt(r.amount)}</Text>
                   </Table.Td>
 
                   <Table.Td ta="right">
